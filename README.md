@@ -1,1 +1,1 @@
-# scalaProjects
+# scala snippets (datacamp and self demos)
