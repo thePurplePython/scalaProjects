@@ -1,1 +1,2 @@
-# scala snippets (datacamp and self demos)
+# scalaSnippets
+scala snippets
