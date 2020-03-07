@@ -1,4 +1,4 @@
-name := "Simple Project"
+name := "Spark Structured Streaming"
 
 version := "1.0"
 
