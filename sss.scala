@@ -91,7 +91,7 @@ object StreamingApp {
         }
 
         def stop(n: Int): Unit = {
-        	    return Thread.sleep(n)
+        	return Thread.sleep(n)
         }
 
         def kill(): Unit = {
