@@ -1,4 +1,3 @@
-
 import org.apache.spark.sql.types.{StructType, StringType, LongType, DoubleType}
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.DataFrame
@@ -36,7 +35,7 @@ object StreamingApp {
         val path = "/Users/grp/sparkTheDefinitiveGuide/data/activity-data-sample/"
         val repartition = 1
         val checkpointPath = "/Users/grp/Desktop/spark-apps/junk/cp"
-        val trigger = "10 seconds"
+        val trigger = "5 seconds"
         val target = "/Users/grp/Desktop/spark-apps/parquet/data.parquet"
         val n = 300000 // 5 min
         */
