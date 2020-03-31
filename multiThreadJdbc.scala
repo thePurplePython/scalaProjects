@@ -41,3 +41,14 @@ def multiThreadJdbc(key: String,
               .load())
     return df
 }
+
+/*
+val df = multiThreadJdbc(
+    "KEY",
+    "(SELECT * FROM \"DATABASE\".\"TABLE") as QUERY",
+    "jdbc:db://HOST:PORT",
+    "driver",
+    "user",
+    "password",
+    int(numPartitions))
+*/
