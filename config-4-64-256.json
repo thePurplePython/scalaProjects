@@ -1,0 +1,50 @@
+[ 
+  {
+      "Classification": "spark",
+      "Properties": {
+      "maximizeResourceAllocation": "true"
+    }
+  },
+  {
+    "Classification": "spark-env",
+    "Properties": {},
+    "Configurations": [
+        {
+            "Classification": "export",
+            "Properties": {
+                "PYSPARK_PYTHON": "/usr/bin/python3",
+                "PYSPARK_PYTHON_DRIVER": "/usr/bin/python3"
+            },
+            "Configurations": []
+        }
+    ]
+  },
+  {
+    "Classification": "spark-defaults", 
+    "Properties": {
+        "spark.yarn.appMasterEnv.SPARK_HOME": "/usr/lib/spark",
+        "spark.yarn.appMasterEnv.PYSPARK_PYTHON": "/usr/bin/python3",
+        "spark.executorEnv.PYSPARK_PYTHON": "/usr/bin/python3",
+        "spark.executor.cores": "5",
+        "spark.driver.cores": "5",
+        "spark.driver.memory": "18000M",
+        "spark.executor.memory": "18000M",
+        "spark.executor.memoryOverhead": "3000M",
+        "spark.driver.memoryOverhead": "3000M",
+        "spark.default.parallelism": "470",
+        "spark.executor.instances": "47",
+        "spark.serializer": "org.apache.spark.serializer.KryoSerializer",
+        "spark.dynamicAllocation.enabled": "false",
+        "spark.executor.extraJavaOptions": "-XX:+UseG1GC -XX:+UnlockDiagnosticVMOptions -XX:+G1SummarizeConcMark -XX:InitiatingHeapOccupancyPercent=35 -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:OnOutOfMemoryError='kill -9 %p'",
+        "spark.driver.extraJavaOptions": "-XX:+UseG1GC -XX:+UnlockDiagnosticVMOptions -XX:+G1SummarizeConcMark -XX:InitiatingHeapOccupancyPercent=35 -verbose:gc -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:OnOutOfMemoryError='kill -9 %p'"
+    }
+  },
+  {
+    "Classification": "yarn-site", 
+    "Properties": {
+        "yarn.nodemanager.vmem-check-enabled": "false",
+        "yarn.nodemanager.pmem-check-enabled":"false"
+    }
+  }
+  
+]
