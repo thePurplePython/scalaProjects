@@ -50,5 +50,5 @@ val df = multiThreadJdbc(
     "driver",
     "user",
     "password",
-    int(numPartitions))
+    8)
 */
